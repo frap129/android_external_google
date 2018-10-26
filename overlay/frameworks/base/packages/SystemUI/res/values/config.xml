@@ -1,4 +1,7 @@
 <resources>
     <!-- SystemUI vender service, used in config_systemUIServiceComponents. -->
     <string name="config_systemUIVendorServiceComponent" translatable="false">com.google.android.systemui.GoogleServices</string>
+
+    <!-- SystemUIFactory component -->
+    <string name="config_systemUIFactoryComponent">com.google.android.systemui.SystemUIGoogleFactory</string>
 </resources>
