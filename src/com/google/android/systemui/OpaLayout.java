@@ -170,7 +170,7 @@ public class OpaLayout extends FrameLayout implements ButtonInterface {
                 updateOpaLayout();
             }
         };
-        mDiamondAnimation = new Runnable() { //new -$$Lambda$OpaLayout$4_BG8NBMX8f4CM36AHgbLewodcE(this);
+        mDiamondAnimation = new Runnable() {
             @Override
             public void run() {
                 startDiamondAnimation();
@@ -402,7 +402,6 @@ public class OpaLayout extends FrameLayout implements ButtonInterface {
     }
 
     private void startAll(ArraySet<Animator> animators) {
-        //showAllOpa();
         for (int i = animators.size() - 1; i >= 0; i--) {
             ((Animator) animators.valueAt(i)).start();
         }
@@ -414,25 +413,25 @@ public class OpaLayout extends FrameLayout implements ButtonInterface {
 
     private ArraySet<Animator> getDiamondAnimatorSet() {
         ArraySet<Animator> animators = new ArraySet();
-        animators.add(OpaUtils.getDeltaAnimatorY(mTop, mDiamondInterpolator, -OpaUtils.getPxVal(mResources, R.dimen.opa_diamond_translation), 200));
-        animators.add(OpaUtils.getScaleAnimatorX(mTop, DIAMOND_DOTS_SCALE_FACTOR, DIAMOND_ANIMATION_DURATION, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getScaleAnimatorY(mTop, DIAMOND_DOTS_SCALE_FACTOR, DIAMOND_ANIMATION_DURATION, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getDeltaAnimatorY(mBottom, mDiamondInterpolator, OpaUtils.getPxVal(mResources, R.dimen.opa_diamond_translation), 200));
-        animators.add(OpaUtils.getScaleAnimatorX(mBottom, DIAMOND_DOTS_SCALE_FACTOR, DIAMOND_ANIMATION_DURATION, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getScaleAnimatorY(mBottom, DIAMOND_DOTS_SCALE_FACTOR, DIAMOND_ANIMATION_DURATION, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getDeltaAnimatorX(mLeft, mDiamondInterpolator, -OpaUtils.getPxVal(mResources, R.dimen.opa_diamond_translation), 200));
-        animators.add(OpaUtils.getScaleAnimatorX(mLeft, DIAMOND_DOTS_SCALE_FACTOR, DIAMOND_ANIMATION_DURATION, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getScaleAnimatorY(mLeft, DIAMOND_DOTS_SCALE_FACTOR, DIAMOND_ANIMATION_DURATION, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getDeltaAnimatorX(mRight, mDiamondInterpolator, OpaUtils.getPxVal(mResources, R.dimen.opa_diamond_translation), 200));
-        animators.add(OpaUtils.getScaleAnimatorX(mRight, DIAMOND_DOTS_SCALE_FACTOR, DIAMOND_ANIMATION_DURATION, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getScaleAnimatorY(mRight, DIAMOND_DOTS_SCALE_FACTOR, DIAMOND_ANIMATION_DURATION, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getScaleAnimatorX(mWhite, DIAMOND_HOME_SCALE_FACTOR, 200, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getScaleAnimatorY(mWhite, DIAMOND_HOME_SCALE_FACTOR, 200, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getScaleAnimatorX(mWhiteCutout, DIAMOND_HOME_SCALE_FACTOR, 200, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getScaleAnimatorY(mWhiteCutout, DIAMOND_HOME_SCALE_FACTOR, 200, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getScaleAnimatorX(mHalo, HALO_SCALE_FACTOR, 100, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getScaleAnimatorY(mHalo, HALO_SCALE_FACTOR, 100, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getAlphaAnimator(mHalo, 0.0f, 100, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getDeltaAnimatorY(this.mTop, this.mDiamondInterpolator, -OpaUtils.getPxVal(this.mResources, R.dimen.opa_diamond_translation), 200));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mTop, 0.8f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mTop, 0.8f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getDeltaAnimatorY(this.mBottom, this.mDiamondInterpolator, OpaUtils.getPxVal(this.mResources, R.dimen.opa_diamond_translation), 200));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mBottom, 0.8f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mBottom, 0.8f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getDeltaAnimatorX(this.mLeft, this.mDiamondInterpolator, -OpaUtils.getPxVal(this.mResources, R.dimen.opa_diamond_translation), 200));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mLeft, 0.8f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mLeft, 0.8f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getDeltaAnimatorX(this.mRight, this.mDiamondInterpolator, OpaUtils.getPxVal(this.mResources, R.dimen.opa_diamond_translation), 200));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mRight, 0.8f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mRight, 0.8f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mWhite, 0.625f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mWhite, 0.625f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mWhiteCutout, 0.625f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mWhiteCutout, 0.625f, 200, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mHalo, 0.47619048f, 100, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mHalo, 0.47619048f, 100, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getAlphaAnimator(this.mHalo, 0.0f, 100, Interpolators.FAST_OUT_SLOW_IN));
         getLongestAnim(animators).addListener((Animator.AnimatorListener)new AnimatorListenerAdapter() {
             public void onAnimationCancel(final Animator animator) {
                 mCurrentAnimators.clear();
@@ -447,29 +446,29 @@ public class OpaLayout extends FrameLayout implements ButtonInterface {
 
     private ArraySet<Animator> getRetractAnimatorSet() {
         ArraySet<Animator> animators = new ArraySet<Animator>();
-        animators.add(OpaUtils.getTranslationAnimatorX(this.mRed, OpaUtils.INTERPOLATOR_40_OUT, OpaLayout.RETRACT_ANIMATION_DURATION));
-        animators.add(OpaUtils.getTranslationAnimatorY(this.mRed, OpaUtils.INTERPOLATOR_40_OUT, OpaLayout.RETRACT_ANIMATION_DURATION));
-        animators.add(OpaUtils.getScaleAnimatorX(this.mRed, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getScaleAnimatorY(this.mRed, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getTranslationAnimatorX(this.mBlue, OpaUtils.INTERPOLATOR_40_OUT, OpaLayout.RETRACT_ANIMATION_DURATION));
-        animators.add(OpaUtils.getTranslationAnimatorY(this.mBlue, OpaUtils.INTERPOLATOR_40_OUT, OpaLayout.RETRACT_ANIMATION_DURATION));
-        animators.add(OpaUtils.getScaleAnimatorX(this.mBlue, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getScaleAnimatorY(this.mBlue, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getTranslationAnimatorX(this.mGreen, OpaUtils.INTERPOLATOR_40_OUT, OpaLayout.RETRACT_ANIMATION_DURATION));
-        animators.add(OpaUtils.getTranslationAnimatorY(this.mGreen, OpaUtils.INTERPOLATOR_40_OUT, OpaLayout.RETRACT_ANIMATION_DURATION));
-        animators.add(OpaUtils.getScaleAnimatorX(this.mGreen, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getScaleAnimatorY(this.mGreen, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getTranslationAnimatorX(this.mYellow, OpaUtils.INTERPOLATOR_40_OUT, OpaLayout.RETRACT_ANIMATION_DURATION));
-        animators.add(OpaUtils.getTranslationAnimatorY(this.mYellow, OpaUtils.INTERPOLATOR_40_OUT, OpaLayout.RETRACT_ANIMATION_DURATION));
-        animators.add(OpaUtils.getScaleAnimatorX(this.mYellow, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getScaleAnimatorY(this.mYellow, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getScaleAnimatorX(this.mWhite, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getScaleAnimatorY(this.mWhite, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getScaleAnimatorX(this.mWhiteCutout, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getScaleAnimatorY(this.mWhiteCutout, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, OpaUtils.INTERPOLATOR_40_OUT));
-        animators.add(OpaUtils.getScaleAnimatorX(this.mHalo, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getScaleAnimatorY(this.mHalo, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, Interpolators.FAST_OUT_SLOW_IN));
-        animators.add(OpaUtils.getAlphaAnimator(this.mHalo, 1.0f, OpaLayout.RETRACT_ANIMATION_DURATION, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getTranslationAnimatorX(this.mRed, OpaUtils.INTERPOLATOR_40_OUT, 190));
+        animators.add(OpaUtils.getTranslationAnimatorY(this.mRed, OpaUtils.INTERPOLATOR_40_OUT, 190));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mRed, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mRed, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getTranslationAnimatorX(this.mBlue, OpaUtils.INTERPOLATOR_40_OUT, 190));
+        animators.add(OpaUtils.getTranslationAnimatorY(this.mBlue, OpaUtils.INTERPOLATOR_40_OUT, 190));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mBlue, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mBlue, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getTranslationAnimatorX(this.mGreen, OpaUtils.INTERPOLATOR_40_OUT, 190));
+        animators.add(OpaUtils.getTranslationAnimatorY(this.mGreen, OpaUtils.INTERPOLATOR_40_OUT, 190));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mGreen, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mGreen, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getTranslationAnimatorX(this.mYellow, OpaUtils.INTERPOLATOR_40_OUT, 190));
+        animators.add(OpaUtils.getTranslationAnimatorY(this.mYellow, OpaUtils.INTERPOLATOR_40_OUT, 190));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mYellow, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mYellow, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mWhite, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mWhite, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mWhiteCutout, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mWhiteCutout, 1.0f, 190, OpaUtils.INTERPOLATOR_40_OUT));
+        animators.add(OpaUtils.getScaleAnimatorX(this.mHalo, 1.0f, 190, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getScaleAnimatorY(this.mHalo, 1.0f, 190, Interpolators.FAST_OUT_SLOW_IN));
+        animators.add(OpaUtils.getAlphaAnimator(this.mHalo, 1.0f, 190, Interpolators.FAST_OUT_SLOW_IN));
         getLongestAnim(animators).addListener((Animator.AnimatorListener) new AnimatorListenerAdapter() {
             public void onAnimationEnd(final Animator animator) {
                 OpaLayout.this.mCurrentAnimators.clear();
@@ -539,7 +538,6 @@ public class OpaLayout extends FrameLayout implements ButtonInterface {
             public void onAnimationEnd(final Animator animator) {
                 mCurrentAnimators.clear();
                 mAnimationState = OpaLayout.ANIMATION_STATE_NONE;
-//                hideAllOpa();
             }
         });
         return animators;
