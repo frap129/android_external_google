@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package systemui;
+package SmartspaceProto;
 
 option java_package = "com.android.systemui.smartspace";
 option java_outer_classname = "SmartspaceProto";
@@ -8,7 +8,7 @@ option java_outer_classname = "SmartspaceProto";
 message SmartspaceUpdate {
     message SmartspaceCard {
         message ExpiryCriteria {
-            required uint64 expirationTimeMillis = 1;
+            required int64 expirationTimeMillis = 1;
             required int32 maxImpressions = 2;
         }
 
@@ -72,9 +72,9 @@ message SmartspaceUpdate {
         required Image icon = 6;
         required CardType cardType = 7;
         required TapAction tapAction = 8;
-        required uint64 updateTimeMillis = 9;
-        required uint64 eventTimeMillis = 10;
-        required uint64 eventDurationMillis = 11;
+        required int64 updateTimeMillis = 9;
+        required int64 eventTimeMillis = 10;
+        required int64 eventDurationMillis = 11;
         required ExpiryCriteria expiryCriteria = 12;
         required int32 cardPriority =13;
     }
@@ -84,8 +84,8 @@ message SmartspaceUpdate {
 
 message CardWrapper {
     required SmartspaceUpdate.SmartspaceCard card = 1;
-    required uint64 publishTime = 2;
-    required uint64 gsaUpdateTime = 3;
+    required int64 publishTime = 2;
+    required int64 gsaUpdateTime = 3;
     required int32 gsaVersionCode = 4;
     required bytes icon = 5;
     required bool isIconGrayscale = 6;
