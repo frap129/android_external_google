@@ -10,7 +10,7 @@ import android.os.UserHandle;
 import android.provider.MediaStore;
 import android.provider.Settings;
 
-import com.android.internal.util.du.ActionUtils;
+import com.android.internal.util.cr.CrUtils;
 import com.android.systemui.Dependency;
 import com.android.systemui.assist.AssistManager;
 
@@ -49,7 +49,7 @@ public class CustomActions extends Action {
             default:
                 break;
             case 1: // Assistant
-                ActionUtils.switchScreenOn(getContext());
+                CrUtils.switchScreenOn(getContext());
                 mAssistManager.startAssist(new Bundle() /* args */);
                 break;
             case 2: // Voice search
@@ -58,38 +58,38 @@ public class CustomActions extends Action {
                 }
                 break;
             case 3: // Camera
-                ActionUtils.switchScreenOn(getContext());
+                CrUtils.switchScreenOn(getContext());
                 launchCamera(getContext());
                 break;
             case 4: // Flashlight
-                ActionUtils.toggleCameraFlash();
+                CrUtils.toggleCameraFlash();
                 break;
             case 5: // Clear notifications
-                ActionUtils.clearAllNotifications();
+                CrUtils.clearAllNotifications();
                 break;
             case 6: // Volume panel
                 if (isScreenOn) {
-                    ActionUtils.toggleVolumePanel(getContext());
+                    CrUtils.toggleVolumePanel(getContext());
                 }
                 break;
             case 7: // Screen off
                 if (isScreenOn) {
-                    ActionUtils.switchScreenOff(getContext());
+                    CrUtils.switchScreenOff(getContext());
                 }
                 break;
             case 8: // Notification panel
                 if (isScreenOn) {
-                    ActionUtils.toggleNotifications();
+                    CrUtils.toggleNotifications();
                 }
                 break;
             case 9: // Screenshot
                 if (isScreenOn) {
-                    ActionUtils.takeScreenshot(true);
+                    CrUtils.takeScreenshot(true);
                 }
                 break;
             case 10: // QS panel
                 if (isScreenOn) {
-                    ActionUtils.toggleQsPanel();
+                    CrUtils.toggleQsPanel();
                 }
                 break;
             case 11: // Application
@@ -98,7 +98,7 @@ public class CustomActions extends Action {
                 }
                 break;
             case 12: // Ringer modes
-                ActionUtils.toggleRingerModes(getContext());
+                CrUtils.toggleRingerModes(getContext());
                 break;
         }
     }
