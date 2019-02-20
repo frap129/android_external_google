@@ -100,6 +100,13 @@ public class CustomActions extends Action {
             case 12: // Ringer modes
                 CrUtils.toggleRingerModes(getContext());
                 break;
+            case 13: // Power Button
+                if (isScreenOn) {
+                    CrUtils.switchScreenOff(getContext());
+                } else {
+                    CrUtils.switchScreenOn(getContext());
+                }
+                break;
         }
     }
 
